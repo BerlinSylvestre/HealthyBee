@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HealthyBee - Fitness Log</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 text-gray-100 font-sans">
+  <div class="container mx-auto py-10 px-4">
+    <h1 class="text-3xl font-bold text-center mb-8">HealthyBee - Fitness Log</h1>
+
+    <!-- Form Section -->
+    <div class="bg-gray-800 shadow rounded-lg p-6 mb-10">
+      <h2 class="text-xl font-semibold mb-4">Add Entry</h2>
+      <form id="foodLogForm" class="space-y-4">
+        <div>
+          <label class="block text-sm font-medium">Date:</label>
+          <input type="date" id="date" class="mt-1 block w-full bg-gray-700 border-gray-600 rounded text-gray-100 shadow-sm" required>
+        </div>
+        <div>
+          <label class="block text-sm font-medium">Food:</label>
+          <input type="text" id="food" class="mt-1 block w-full bg-gray-700 border-gray-600 rounded text-gray-100 shadow-sm" required>
+        </div>
+        <div>
+          <label class="block text-sm font-medium">Calories:</label>
+          <input type="number" id="calories" class="mt-1 block w-full bg-gray-700 border-gray-600 rounded text-gray-100 shadow-sm" required>
+        </div>
+        <div class="grid grid-cols-2 gap-4">
+          <div>
+            <label class="block text-sm font-medium">Steps:</label>
+            <input type="text" id="steps" class="mt-1 block w-full bg-gray-700 border-gray-600 rounded text-gray-100 shadow-sm">
+          </div>
+          <div>
+            <label class="block text-sm font-medium">Gym:</label>
+            <input type="text" id="gym" class="mt-1 block w-full bg-gray-700 border-gray-600 rounded text-gray-100 shadow-sm">
+          </div>
+        </div>
+        <div>
+          <label class="block text-sm font-medium">Weight:</label>
+          <input type="text" id="weight" class="mt-1 block w-full bg-gray-700 border-gray-600 rounded text-gray-100 shadow-sm">
+        </div>
+        <button type="submit" class="w-full bg-blue-600 hover:bg-blue-500 text-white py-2 px-4 rounded-md">Add Entry</button>
+      </form>
+    </div>
+
+    <!-- Log Section -->
+    <div class="bg-gray-800 shadow rounded-lg p-6">
+      <h2 class="text-xl font-semibold mb-4">Log Entries</h2>
+      <table class="w-full text-left border-collapse">
+        <thead class="bg-gray-700">
+          <tr>
+            <th class="px-4 py-2 border border-gray-600">Date</th>
+            <th class="px-4 py-2 border border-gray-600">Food</th>
+            <th class="px-4 py-2 border border-gray-600">Calories</th>
+            <th class="px-4 py-2 border border-gray-600">Steps</th>
+            <th class="px-4 py-2 border border-gray-600">Gym</th>
+            <th class="px-4 py-2 border border-gray-600">Weight</th>
+          </tr>
+        </thead>
+        <tbody id="logTable" class="bg-gray-800">
+          <!-- Entries will be added here dynamically -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
